@@ -21,7 +21,9 @@ end
 
 -- GUI Containers
 function GUI.CreateScreenGUI(plr, props)
-	return createInstance("ScreenGui", "Bearium_GUI_" .. tostring(math.random(1, 10000)), plr, props)
+	local ScreenGUI = createInstance("ScreenGui", "Bearium_GUI_" .. tostring(math.random(1, 10000)), plr, props)
+	ScreenGUI:SetAttribute("Bearium", true)
+	return ScreenGUI
 end
 
 function GUI.CreateBillboardGui(name, parent, props)
